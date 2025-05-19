@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="main.java.clinique.controller.MedecinsController"
+      spacing="10" alignment="CENTER">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Détails du Médecin" styleClass="section-title"/>
+    <Label fx:id="lblNom"/>
+    <Label fx:id="lblPrenom"/>
+    <Label fx:id="lblSpecialite"/>
+    <Label fx:id="lblTelephone"/>
+    <Label fx:id="lblEmail"/>
+    <Button text="Fermer" onAction="#handleFermer"/>
+</VBox>

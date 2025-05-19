@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.*?>
+
+<VBox spacing="15" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="main.java.clinique.controller.SecretaireController"
+      stylesheets="@/styles/app.css"
+      prefWidth="500" prefHeight="400"
+      alignment="CENTER">
+      
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Modifier un secrétaire" styleClass="section-title"/>
+
+    <GridPane vgap="15" hgap="15">
+        <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" minWidth="100" />
+            <ColumnConstraints hgrow="ALWAYS" />
+        </columnConstraints>
+
+        <!-- Nom -->
+        <Label text="Nom:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="tfNom" promptText="Nom" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <!-- Prénom -->
+        <Label text="Prénom:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="tfPrenom" promptText="Prénom" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <!-- Email -->
+        <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField fx:id="tfEmail" promptText="Email" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <!-- Téléphone -->
+        <Label text="Téléphone:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <TextField fx:id="tfTelephone" promptText="Téléphone" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    </GridPane>
+
+    <!-- Message d'erreur -->
+    <Label fx:id="lblErreur" styleClass="error-label"/>
+
+    <!-- Boutons d'action -->
+    <HBox spacing="15" alignment="CENTER_RIGHT">
+        <Button text="Annuler" onAction="#handleAnnuler" styleClass="button-cancel"/>
+        <Button text="Enregistrer" onAction="#handleEnregistrer" styleClass="button-save"/>
+    </HBox>
+</VBox>

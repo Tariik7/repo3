@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="15" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="main.java.clinique.controller.SecretaireController"
+      stylesheets="@/styles/app.css"
+      prefWidth="1200" prefHeight="700">
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+    
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Liste des Secrétaires" styleClass="section-title"/>
+        <Pane HBox.hgrow="ALWAYS"/>
+        <Button text="Ajouter Secrétaire" onAction="#handleAjouterSecretaire"/>
+        <Button text="Accueil" onAction="#handleHome"/>
+    </HBox>
+
+    <!-- Barre de recherche -->
+    <HBox spacing="10" alignment="CENTER_LEFT" styleClass="search-bar">
+        <TextField fx:id="searchField" promptText="Rechercher un secrétaire..." HBox.hgrow="ALWAYS"/>
+        <Button text="Rechercher" onAction="#handleSearch"/>
+        <Button text="Actualiser" onAction="#handleRefresh"/>
+    </HBox>
+
+    <TableView fx:id="tableSecretaires" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colNom" text="Nom" prefWidth="150"/>
+            <TableColumn fx:id="colPrenom" text="Prénom" prefWidth="150"/>
+            <TableColumn fx:id="colEmail" text="Email" prefWidth="200"/>
+            <TableColumn fx:id="colTelephone" text="Téléphone" prefWidth="150"/>
+            <TableColumn fx:id="colActions" text="Actions" prefWidth="300"/>
+        </columns>
+    </TableView>
+</VBox>

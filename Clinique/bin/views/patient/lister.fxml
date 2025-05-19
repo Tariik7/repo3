@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="main.java.clinique.controller.PatientsController"
+            stylesheets="@/styles/app.css"
+            prefWidth="1200" prefHeight="700">
+
+	    <VBox spacing="15" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0"
+	      AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="0">
+			    <padding>
+			        <Insets top="20" right="20" bottom="20" left="20"/>
+			    </padding>
+
+
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Liste des Patients" styleClass="section-title"/>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Button text="Ajouter un patient" onAction="#handleAjouterPatient"/>
+            <Button text="Accueil" onAction="#handleHome"/>
+
+        </HBox>
+
+        <!-- Barre de recherche -->
+        <HBox spacing="10" alignment="CENTER_LEFT" styleClass="search-bar">
+            <TextField fx:id="searchField" promptText="Rechercher un patient..." />
+            <Button text="Rechercher" onAction="#handleSearch"/>
+            <Button text="Actualiser" onAction="#handleRefresh"/>
+        </HBox>
+
+        <TableView fx:id="tablePatients" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colNom" text="Nom" prefWidth="150"/>
+                <TableColumn fx:id="colPrenom" text="Prénom" prefWidth="150"/>
+                <TableColumn fx:id="colEmail" text="Email" prefWidth="200"/>
+                <TableColumn fx:id="colSexe" text="Sexe" prefWidth="100"/>
+                <TableColumn fx:id="colTelephone" text="Téléphone" prefWidth="150"/>
+                <TableColumn fx:id="colActions" text="Actions" prefWidth="300"/>
+            </columns>
+        </TableView>
+
+    </VBox>
+</AnchorPane>

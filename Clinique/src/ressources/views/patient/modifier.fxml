@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.collections.FXCollections?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            xmlns="http://javafx.com/javafx"
+            fx:controller="main.java.clinique.controller.PatientsController"
+            stylesheets="@/styles/app.css"
+            prefWidth="500" prefHeight="500">
+
+    <VBox alignment="CENTER" spacing="15" AnchorPane.topAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+
+        <Label text="Modifier un Patient" styleClass="header-title"/>
+
+        <TextField fx:id="tfNom" promptText="Nom"/>
+        <TextField fx:id="tfPrenom" promptText="Prénom"/>
+        <DatePicker fx:id="dpNaissance" promptText="Date de naissance"/> <!-- ✅ AJOUT ESSENTIEL -->
+        <TextField fx:id="tfTelephone" promptText="Téléphone"/>
+        <TextField fx:id="tfEmail" promptText="Email"/>
+
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Sexe:"/>
+            <ChoiceBox fx:id="cbSexe">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="M"/>
+                        <String fx:value="F"/>
+                    </FXCollections>
+                </items>
+            </ChoiceBox>
+        </HBox>
+
+        <TextField fx:id="tfAdresse" promptText="Adresse"/>
+
+        <Label fx:id="lblErreur" textFill="red"/>
+
+        <HBox spacing="10" alignment="CENTER">
+            <Button text="Enregistrer" onAction="#handleEnregistrer" styleClass="btn-save"/>
+            <Button text="Annuler" onAction="#handleAnnuler" styleClass="btn-cancel"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

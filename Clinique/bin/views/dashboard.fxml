@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.fxml.FXMLLoader?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="main.java.clinique.controller.DashboardController"
+            stylesheets="@/styles/app.css"
+			fx:id="root">
+    <!-- 🔹 En-tête -->
+    
+
+    <!-- 🔹 Contenu principal -->
+    <center>
+        <VBox spacing="20">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <!-- 🔹 Image d’accueil -->
+            <StackPane alignment="CENTER">
+                <ImageView fx:id="homeImage" fitWidth="1000" preserveRatio="true"/>
+            </StackPane>
+
+        </VBox>
+    </center>
+</BorderPane>

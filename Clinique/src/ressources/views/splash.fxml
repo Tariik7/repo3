@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="main.java.clinique.controller.SplashController"
+           stylesheets="@/styles/app.css"
+           prefWidth="600" prefHeight="400" styleClass="splash-root">
+
+    <VBox alignment="CENTER" spacing="20">
+        <ImageView fx:id="logo" fitWidth="100" fitHeight="100" />
+        <Label text="Clinique Manager" styleClass="splash-title"/>
+        <ProgressIndicator fx:id="progressIndicator"/>
+    </VBox>
+</StackPane>

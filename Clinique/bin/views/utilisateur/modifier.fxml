@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="main.java.clinique.controller.UtilisateurController"
+            prefWidth="400" prefHeight="400" stylesheets="@/styles/app.css">
+
+    <VBox spacing="15" alignment="CENTER"
+          AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+        <Label text="Modifier Utilisateur" styleClass="header-title"/>
+        
+        <TextField fx:id="tfLogin" promptText="Login"/>
+        <PasswordField fx:id="tfPassword" promptText="Mot de passe"/>
+        <ChoiceBox fx:id="cbRole" promptText="Rôle"/>
+
+        <Label fx:id="lblErreur" textFill="red"/>
+
+        <HBox spacing="10" alignment="CENTER">
+            <Button text="Enregistrer" onAction="#handleEnregistrer" styleClass="btn-save"/>
+            <Button text="Annuler" onAction="#handleAnnuler" styleClass="btn-cancel"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

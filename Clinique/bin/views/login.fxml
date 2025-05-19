@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="main.java.clinique.controller.LoginController"
+           stylesheets="@/styles/app.css">
+
+    <VBox spacing="15" alignment="CENTER" styleClass="login-box">
+        <Label text="Connexion à la Clinique" styleClass="login-title"/>
+
+        <TextField fx:id="loginField" promptText="Login" styleClass="login-field"/>
+        <PasswordField fx:id="passwordField" promptText="Mot de passe" styleClass="login-field"/>
+
+        <Button text="Connexion" onAction="#handleLogin" styleClass="login-button"/>
+
+        <Label fx:id="errorLabel" styleClass="error-label"/>
+    </VBox>
+</StackPane>

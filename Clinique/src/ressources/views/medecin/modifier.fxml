@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="main.java.clinique.controller.MedecinsController"
+            stylesheets="@/styles/app.css"
+            prefWidth="500" prefHeight="550">
+
+    <VBox spacing="12" alignment="CENTER" layoutX="50" layoutY="20"
+          prefWidth="400" styleClass="form-container">
+        <Label text="Modifier un Médecin" style="-fx-font-size: 20px; -fx-text-fill: #333;"/>
+
+        <TextField fx:id="tfNom" promptText="Nom"/>
+        <TextField fx:id="tfPrenom" promptText="Prénom"/>
+        <TextField fx:id="tfSpecialite" promptText="Spécialité"/>
+        <TextField fx:id="tfTelephone" promptText="Téléphone"/>
+        <TextField fx:id="tfEmail" promptText="Email"/>
+
+        <Label fx:id="lblErreur" textFill="red"/>
+
+        <HBox spacing="10" alignment="CENTER">
+            <Button text="Enregistrer" onAction="#handleEnregistrer" styleClass="btn-save"/>
+            <Button text="Annuler" onAction="#handleAnnuler" styleClass="btn-cancel"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

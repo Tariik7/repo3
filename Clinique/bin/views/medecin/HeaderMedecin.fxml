@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="main.java.clinique.controller.DashboardController"
+      spacing="20" alignment="CENTER_LEFT" styleClass="top-bar">
+
+    <Label text="CLINIQUE SYSTEM" styleClass="header-title"/>
+    <Pane HBox.hgrow="ALWAYS"/>
+    <Button fx:id="btnMesRendezvous" text=" Mes Rendez-Vous" />
+    <Button fx:id="btnMesConsultation" text="Mes Consultation" /> 
+    <Button text="Déconnexion" onAction="#logout"/>
+</HBox>

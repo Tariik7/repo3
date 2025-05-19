@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="main.java.clinique.controller.UtilisateurController"
+            prefWidth="800" prefHeight="600" stylesheets="@/styles/app.css">
+
+    <VBox spacing="15" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.bottomAnchor="20">
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Liste des Utilisateurs" styleClass="section-title"/>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Button text="Ajouter" onAction="#handleAjouterUtilisateur"/>
+            <Button text="Accueil" onAction="#handleHome"/>
+        </HBox>
+
+        <HBox spacing="10">
+            <TextField fx:id="searchField" promptText="Rechercher par login..."/>
+            <Button text="Rechercher" onAction="#handleSearch"/>
+            <Button text="Actualiser" onAction="#chargerUtilisateurs"/>
+        </HBox>
+
+        <TableView fx:id="tableUtilisateurs" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colLogin" text="Login" prefWidth="200"/>
+                <TableColumn fx:id="colRole" text="Rôle" prefWidth="150"/>
+                <TableColumn fx:id="colActions" text="Actions" prefWidth="250"/>
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane>
