@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="main.java.clinique.controller.UtilisateurController"
+            prefWidth="500" prefHeight="550" stylesheets="@/styles/app.css">
+
+    <VBox spacing="15" alignment="CENTER"
+          AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+        <Label text="Ajouter un Utilisateur" styleClass="header-title"/>
+        
+        <!-- Champs communs pour tous les utilisateurs -->
+        <TextField fx:id="tfLogin" promptText="Login / Email"/>
+        <PasswordField fx:id="tfMotDePasse" promptText="Mot de passe"/>
+        
+        <HBox spacing="10">
+            <Label text="Rôle:" style="-fx-font-weight: bold"/>
+            <ChoiceBox fx:id="cbRole"/>
+        </HBox>
+        
+        <!-- Champs spécifiques au rôle -->
+        <VBox fx:id="vbChampsSpecifiques" spacing="10">
+            <!-- Ces champs seront visibles/cachés en fonction du rôle sélectionné -->
+            <TextField fx:id="tfNom" promptText="Nom"/>
+            <TextField fx:id="tfPrenom" promptText="Prénom"/>
+            <TextField fx:id="tfTelephone" promptText="Téléphone"/>
+            
+            <!-- Champ spécifique au médecin -->
+            <TextField fx:id="tfSpecialite" promptText="Spécialité (médecin uniquement)"/>
+        </VBox>
+
+        <Label fx:id="lblErreur" textFill="red"/>
+
+        <HBox spacing="10" alignment="CENTER">
+            <Button text="Enregistrer" onAction="#handleEnregistrer" styleClass="btn-save"/>
+            <Button text="Annuler" onAction="#handleAnnuler" styleClass="btn-cancel"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

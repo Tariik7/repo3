@@ -1,0 +1,242 @@
+/* Thème de base pour l'application clinique */
+.root {
+    -fx-font-family: 'Segoe UI', 'Arial', sans-serif;
+    -fx-background-color: #f4f9fd;
+}
+
+/* Styles des éléments de base */
+.label {
+    -fx-text-fill: #2A3F54;
+    -fx-font-size: 14px;
+}
+
+.button {
+    -fx-background-color: #2196f3;
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px 16px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 3, 0, 0, 1);
+}
+
+.button:hover {
+    -fx-background-color: #1976d2;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 2);
+}
+
+.button:pressed {
+    -fx-background-color: #0d47a1;
+}
+
+/* Champs de texte */
+.text-field, .password-field {
+    -fx-background-color: white;
+    -fx-border-color: #90a4ae;
+    -fx-border-radius: 4px;
+    -fx-padding: 8px 12px;
+    -fx-pref-height: 35px;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #2196f3;
+}
+
+/* TableView améliorée */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #2196f3;
+    -fx-background-radius: 5px 5px 0px 0px;
+    -fx-padding: 5px;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-size: 40px;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell {
+    -fx-background-color: white;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f5f5f5;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #e1f5fe;
+}
+
+.table-row-cell:filled:selected {
+    -fx-background-color: #bbdefb;
+    -fx-text-fill: black;
+}
+
+/* Entête et barre supérieure */
+.top-bar {
+    -fx-background-color: #1565c0;
+    -fx-padding: 12px;
+}
+
+.header-title {
+    -fx-text-fill: white;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+/* Style pour les en-têtes des écrans - corrige le contraste */
+.header-background {
+    -fx-background-color: #1565c0; /* Fond bleu foncé */
+}
+
+.header-label {
+    -fx-text-fill: white; /* Texte blanc pour contraster avec le fond bleu */
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+/* Barre de recherche */
+.search-bar {
+    -fx-padding: 10px;
+    -fx-background-color: white;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+}
+
+.search-bar TextField {
+    -fx-pref-width: 300px;
+    -fx-font-size: 14px;
+    -fx-padding: 6px;
+    -fx-border-color: #90a4ae;
+    -fx-border-radius: 4px;
+}
+
+.search-bar Button {
+    -fx-background-color: #2196f3;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 6px 12px;
+    -fx-background-radius: 4px;
+}
+
+/* Titres de section */
+.section-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1565c0;
+    -fx-padding: 10px 0px 15px 0px;
+}
+
+/* Boutons actions */
+.button-view {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px 10px;
+}
+
+.button-edit {
+    -fx-background-color: #2196f3;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px 10px;
+}
+
+.button-delete {
+    -fx-background-color: #f44336;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px 10px;
+}
+
+/* Formulaires */
+.form-container {
+    -fx-background-color: white;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-padding: 20px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+}
+
+.form-container Label {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+/* Boutons formulaire */
+.button-save, .btn-save {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px 16px;
+}
+
+.button-cancel, .btn-cancel {
+    -fx-background-color: #f44336;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px 16px;
+}
+
+/* Message d'erreur */
+.error-label {
+    -fx-text-fill: #f44336;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+/* Amélioration des styles pour les écrans de modification */
+.BorderPane {
+    -fx-background-color: #f4f9fd; /* Fond légèrement coloré */
+}
+
+/* S'assurer que tous les labels dans l'application ont une couleur foncée pour un bon contraste */
+.label {
+    -fx-text-fill: #2A3F54; /* Texte foncé sur fond clair */
+}
+
+/* Style pour les dates et heures */
+.date-picker, .combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #90a4ae;
+    -fx-border-radius: 4px;
+}
+
+/* Zone de texte pour les motifs */
+.text-area {
+    -fx-background-color: white;
+    -fx-border-color: #90a4ae;
+    -fx-border-radius: 4px;
+    -fx-text-fill: #2A3F54; /* Texte foncé */
+}
+
+/* Styles pour les ComboBox et DatePicker */
+.combo-box .list-cell, .date-picker .text-field {
+    -fx-text-fill: #2A3F54; /* Texte foncé */
+}
+
+/* Tailles standards */
+.text-field, .date-picker {
+    -fx-pref-width: 250px;
+}
